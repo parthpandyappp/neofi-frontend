@@ -10,7 +10,7 @@ const Home = () => {
   const [ltsPrice, setLtsPrice] = useState();
 
   useEffect(() => {
-    setEstimation(+investment / ltsPrice);
+    setEstimation(investment.length > 0 ? +investment / ltsPrice : "");
   }, [investment]);
 
   return (

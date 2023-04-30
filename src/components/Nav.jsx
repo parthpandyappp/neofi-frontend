@@ -15,12 +15,38 @@ const Nav = () => {
       <ul
         className={`${
           !mobileToggle ? "hidden" : "block"
-        } md:hidden absolute right-12 flex flex-col gap-3 top-8 text-xl p-3 w-32 bg-white rounded-xl z-50`}
+        } md:hidden absolute right-12 flex flex-col gap-3 top-8 text-xl p-3 w-48 bg-white rounded-xl z-50`}
       >
-        <li className="text-[#627EEA] font-semibold cursor-pointer">Trade</li>
-        <li className="text-[#5A5A5A] font-semibold cursor-pointer">Earn</li>
-        <li className="text-[#5A5A5A] font-semibold cursor-pointer">Support</li>
-        <li className="text-[#5A5A5A] font-semibold cursor-pointer">About</li>
+        <li
+          className="text-[#627EEA] font-semibold cursor-pointer"
+          onClick={() => setMobileToggle(false)}
+        >
+          Trade
+        </li>
+        <li
+          className="text-[#5A5A5A] font-semibold cursor-pointer"
+          onClick={() => setMobileToggle(false)}
+        >
+          Earn
+        </li>
+        <li
+          className="text-[#5A5A5A] font-semibold cursor-pointer"
+          onClick={() => setMobileToggle(false)}
+        >
+          Support
+        </li>
+        <li
+          className="text-[#5A5A5A] font-semibold cursor-pointer"
+          onClick={() => setMobileToggle(false)}
+        >
+          About
+        </li>
+        <li
+          className="text-[#5A5A5A] font-semibold cursor-pointer"
+          onClick={() => setMobileToggle(false)}
+        >
+          Connect wallet
+        </li>
       </ul>
       <RxHamburgerMenu
         className="md:hidden text-xl text-white font-bold"

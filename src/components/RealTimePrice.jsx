@@ -20,17 +20,13 @@ const RealTimePrice = ({ symbol, setLatestPrice }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPrice(null);
+      setLatestPrice(price);
     }, 1000);
 
     return () => {
       clearInterval(interval);
     };
-  }, []);
-
-  useEffect(() => {
-    setLatestPrice(price);
-  }, [price]);
+  }, [price, symbol]);
 
   return (
     <span className="text-lg text-[#627EEA] font-semibold">
