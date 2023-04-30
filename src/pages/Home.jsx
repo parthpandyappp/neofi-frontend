@@ -1,7 +1,14 @@
+import { useState } from "react";
+import { CryptoCoinPopUp } from "../components";
+
 const Home = () => {
+  const [openCoinSelectionPopup, setOpenCoinSelectionPopup] = useState(false);
   return (
     <main class="flex justify-center items-center grow h-screen w-full bg-black z-0">
-      <section class="relative rounded-lg bg-nav w-3/4 min-h-2/3 md:w-1/4 md:min-h-2/3 mx-auto">
+      {openCoinSelectionPopup && (
+        <CryptoCoinPopUp togglePopup={setOpenCoinSelectionPopup} />
+      )}
+      <section class="relative rounded-xl bg-nav w-3/4 min-h-2/3 md:w-1/4 md:min-h-2/3 mx-auto">
         <div className="absolute flex justify-self-center items-center justify-center w-full -top-5">
           <div className="rounded-full outline outline-nav outline-4">
             <img
@@ -20,7 +27,10 @@ const Home = () => {
               ₹ 24882
             </span>
           </article>
-          <article className="cursor-pointer px-3 bg-[#1C1731] w-full h-12 rounded-lg flex items-center justify-between w-full">
+          <article
+            className="cursor-pointer px-3 bg-[#1C1731] w-full h-12 rounded-lg flex items-center justify-between w-full"
+            onClick={() => setOpenCoinSelectionPopup(true)}
+          >
             <span className="flex gap-2 items-center">
               <img src="/icons/eth.svg" alt="" />
               <p className="text-xs md:text-sm text-white">Ethereum</p>
@@ -51,7 +61,7 @@ const Home = () => {
           </article>
         </section>
         <section className="flex flex-col gap-4 px-6 md:px-11 mt-16 w-full">
-          <button className="w-auto bg-gradient-to-r from-[#3387D5] to-[#7A06C9] rounded-3xl h-12 text-white font-semibold mb-6">
+          <button className="w-auto bg-gradient-to-r from-[#3387D5] to-[#7A06C9] rounded-3xl h-12 text-white font-semibold mb-10">
             Buy
           </button>
         </section>
