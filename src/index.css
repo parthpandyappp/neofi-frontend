@@ -40,3 +40,14 @@
 .scrollbar-thumb-blue-500::-webkit-scrollbar-thumb {
   background-color: #4299e1;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

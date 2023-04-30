@@ -1,4 +1,6 @@
-const CryptoCoinPopUp = ({ togglePopup }) => {
+import { cryptocurrencies } from "../data";
+
+const CryptoCoinPopUp = ({ selectedCoin, togglePopup, chooseCoin }) => {
   return (
     <div className="fixed z-10 inset-0 overflow-y-auto min-h-screen bg-[#0B0819] bg-opacity-50 backdrop-blur-xs h-screen">
       <main className="h-full w-full flex items-center justify-center items-center px-6 md:px-20">
@@ -21,129 +23,30 @@ const CryptoCoinPopUp = ({ togglePopup }) => {
               />
             </span>
             <section className="h-4/5 overflow-y-scroll flex flex-col gap-4">
-              <span className="flex gap-3 justify-between items-center w-full rounded-md bg-[#1B192D] px-3 py-1">
-                <span className="flex gap-3 items-center">
-                  <img src="/icons/eth.svg" alt="" />
-                  <p className="text-white text-sm">Ethereum</p>
-                </span>
-                <img src="/icons/correct.png" alt="" />
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/aeur.svg" alt="" />
-                <p className="text-white text-sm">Hafooz</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/atom.svg" alt="" />
-                <p className="text-white text-sm">Atom</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/btc.svg" alt="" />
-                <p className="text-white text-sm">Bitcoin</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
-              <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
-                <img src="/icons/cred.svg" alt="" />
-                <p className="text-white text-sm">Cred</p>
-              </span>
+              {cryptocurrencies.map((c) => {
+                const isThatSelectedCoin = c.name === selectedCoin.name;
+                return (
+                  <span
+                    key={c.code}
+                    className={`cursor-pointer flex gap-3 items-center w-full rounded-md px-3 py-1 ${
+                      isThatSelectedCoin &&
+                      "rounded-md bg-[#1B192D] justify-between"
+                    }`}
+                    onClick={() => {
+                      chooseCoin(c);
+                      togglePopup((prev) => !prev);
+                    }}
+                  >
+                    <span className="flex gap-3 items-center">
+                      <img src={c.icon} alt={c.code} />
+                      <p className="text-white text-sm">{c.name}</p>
+                    </span>
+                    {isThatSelectedCoin && (
+                      <img src="/icons/correct.png" alt="" />
+                    )}
+                  </span>
+                );
+              })}
             </section>
           </section>
         </section>
@@ -153,3 +56,23 @@ const CryptoCoinPopUp = ({ togglePopup }) => {
 };
 
 export { CryptoCoinPopUp };
+
+// <span className="flex gap-3 justify-between items-center w-full rounded-md bg-[#1B192D] px-3 py-1">
+//                 <span className="flex gap-3 items-center">
+//                   <img src="/icons/eth.svg" alt="" />
+//                   <p className="text-white text-sm">Ethereum</p>
+//                 </span>
+//                 <img src="/icons/correct.png" alt="" />
+//               </span>
+//               <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
+//                 <img src="/icons/aeur.svg" alt="" />
+//                 <p className="text-white text-sm">Hafooz</p>
+//               </span>
+//               <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
+//                 <img src="/icons/atom.svg" alt="" />
+//                 <p className="text-white text-sm">Atom</p>
+//               </span>
+//               <span className="flex gap-3 items-center w-full rounded-md px-3 py-1">
+//                 <img src="/icons/btc.svg" alt="" />
+//                 <p className="text-white text-sm">Bitcoin</p>
+//               </span>
