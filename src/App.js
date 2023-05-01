@@ -5,10 +5,9 @@ import { Footer, Nav } from './components';
 
 function App() {
   return (
-    <div className="App">
+    <div className="h-screen min-h-screen flex flex-col">
       <Nav />
       <Routes />
-      <Footer />
     </div>
   );
 }
