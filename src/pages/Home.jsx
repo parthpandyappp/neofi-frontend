@@ -10,8 +10,10 @@ const Home = () => {
   const [ltsPrice, setLtsPrice] = useState();
 
   useEffect(() => {
-    setEstimation(investment.length > 0 ? +investment / ltsPrice : "");
-  }, [investment]);
+    setEstimation(investment.length > 0 ? +investment / (ltsPrice * 80) : "");
+  }, [investment, ltsPrice]);
+
+  console.log("LTS: ", ltsPrice, investment);
 
   return (
     <main class="flex justify-center items-center grow h-screen w-full bg-black z-0">
@@ -71,7 +73,7 @@ const Home = () => {
           </article>
           <article className="flex flex-col gap-2">
             <span className="text-xs md:text-sm text-[#C5C5C5] font-normal">
-              Estimate number of ETH you get
+              Estimate number of {selectedCoin.code.slice(0, -4)} you get
             </span>
             <input
               className="px-3 font-bold h-12 rounded-lg w-full bg-[#1C1731] outline-none text-white"

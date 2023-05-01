@@ -11,6 +11,7 @@ const RealTimePrice = ({ symbol, setLatestPrice }) => {
     ws.onmessage = (event) => {
       const tradeData = JSON.parse(event.data);
       setPrice(Math.round(tradeData.p * 100) / 100);
+      setLatestPrice(Math.round(tradeData.p * 100) / 100);
     };
 
     return () => {
@@ -19,9 +20,7 @@ const RealTimePrice = ({ symbol, setLatestPrice }) => {
   }, [symbol]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setLatestPrice(price);
-    }, 1000);
+    const interval = setInterval(() => {}, 5000);
 
     return () => {
       clearInterval(interval);
