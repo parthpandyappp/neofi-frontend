@@ -102,11 +102,17 @@ const cryptocurrencies = [
         "icond": "https://cryptologos.cc/logos/aave-aave-logo.png"
     },
     {
-        "name": "Polkadot",
-        "code": "DOTUSDT",
-        "icon": "/icons/dot.svg",
-        "icond": "https://cryptologos.cc/logos/polkadot-new-dot-logo.png"
-    }
+        "name": "2GIVE",
+        "code": "2GIVEUSDT",
+        "icon": "/icons/2give.svg",
+        "icond": "https://cryptologos.cc/logos/2give-2give-logo.png"
+    },
+    {
+        "name": "Tether",
+        "code": "VTCUSDT",
+        "icon": "/icons/vtc.svg",
+        "icond": "https://cryptologos.cc/logos/adx-adx-logo.png"
+    },
 ]
 
 export { cryptocurrencies }

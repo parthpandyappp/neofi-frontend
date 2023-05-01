@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { cryptocurrencies } from "../data";
+import { searchCoin } from "../helpers/";
 
 const CryptoCoinPopUp = ({ selectedCoin, togglePopup, chooseCoin }) => {
+  const [searchText, setSearchText] = useState("");
+  const coins = searchCoin(cryptocurrencies, searchText);
+
   return (
     <div className="fixed z-10 inset-0 overflow-y-auto min-h-screen bg-[#0B0819] bg-opacity-50 backdrop-blur-xs h-screen">
       <main className="h-full w-full flex items-center justify-center items-center px-6 md:px-20">
@@ -19,11 +24,12 @@ const CryptoCoinPopUp = ({ selectedCoin, togglePopup, chooseCoin }) => {
               <input
                 type="search"
                 className="text-sm font-semibold outline-none text-xs w-full bg-[#181627] text-white"
+                onChange={(e) => setSearchText(e.target.value)}
                 placeholder="Search chains"
               />
             </span>
             <section className="h-4/5 overflow-y-scroll flex flex-col gap-4">
-              {cryptocurrencies.map((c) => {
+              {coins.map((c) => {
                 const isThatSelectedCoin = c.name === selectedCoin.name;
                 return (
                   <span
@@ -35,6 +41,7 @@ const CryptoCoinPopUp = ({ selectedCoin, togglePopup, chooseCoin }) => {
                     onClick={() => {
                       chooseCoin(c);
                       togglePopup((prev) => !prev);
+                      localStorage.setItem("selectedCoin", JSON.stringify(c));
                     }}
                   >
                     <span className="flex gap-3 items-center">
