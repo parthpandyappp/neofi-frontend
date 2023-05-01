@@ -30,11 +30,18 @@ const cryptocurrencies = [
         "icond": "https://cryptologos.cc/logos/xrp-xrp-logo.png"
     },
     {
-        "name": "Dogecoin",
-        "code": "DOGUSDTE",
-        "icon": "/icons/doge.svg",
-        "icond": "https://cryptologos.cc/logos/dogecoin-doge-logo.png"
+        "name": "Polygon",
+        "code": "MATICUSDT",
+        "icon": "/icons/matic.svg",
+        "icond": "https://cryptologos.cc/logos/adx-adx-logo.png"
     },
+    {
+        "name": "Litecoin",
+        "code": "LTCUSDT",
+        "icon": "/icons/ltc.svg",
+        "icond": "https://cryptologos.cc/logos/litecoin-ltc-logo.png"
+    },
+
     {
         "name": "Polkadot",
         "code": "DOTUSDT",
@@ -53,12 +60,7 @@ const cryptocurrencies = [
         "icon": "/icons/link.svg",
         "icond": "https://cryptologos.cc/logos/chainlink-link-logo.png"
     },
-    {
-        "name": "Litecoin",
-        "code": "LTCUSDT",
-        "icon": "/icons/ltc.svg",
-        "icond": "https://cryptologos.cc/logos/litecoin-ltc-logo.png"
-    },
+
     {
         "name": "Stellar",
         "code": "XLMUSDT",
@@ -72,24 +74,6 @@ const cryptocurrencies = [
         "icond": "https://cryptologos.cc/logos/filecoin-fil-logo.png"
     },
     {
-        "name": "Theta Network",
-        "code": "THETAUSDT",
-        "icon": "/icons/theta.svg",
-        "icond": "https://cryptologos.cc/logos/theta-theta-logo.png"
-    },
-    {
-        "name": "Bitcoin SV",
-        "code": "BSVUSDT",
-        "icon": "/icons/bsv.svg",
-        "icond": "https://cryptologos.cc/logos/bitcoin-sv-bsv-logo.png"
-    },
-    {
-        "name": "TRON",
-        "code": "TRXUSDT",
-        "icon": "/icons/trx.svg",
-        "icond": "https://cryptologos.cc/logos/tron-trx-logo.png"
-    },
-    {
         "name": "EOS",
         "code": "EOSUSDT",
         "icon": "/icons/eos.svg",
@@ -101,17 +85,51 @@ const cryptocurrencies = [
         "icon": "/icons/aave.svg",
         "icond": "https://cryptologos.cc/logos/aave-aave-logo.png"
     },
+
+
+    {
+        "name": "TRON",
+        "code": "TRXUSDT",
+        "icon": "/icons/trx.svg",
+        "icond": "https://cryptologos.cc/logos/tron-trx-logo.png"
+    },
+
     {
         "name": "2GIVE",
         "code": "2GIVEUSDT",
         "icon": "/icons/2give.svg",
         "icond": "https://cryptologos.cc/logos/2give-2give-logo.png"
     },
+
     {
-        "name": "Tether",
-        "code": "VTCUSDT",
-        "icon": "/icons/vtc.svg",
+        "name": "Polymath",
+        "code": "POLYUSDT",
+        "icon": "/icons/poly.svg",
         "icond": "https://cryptologos.cc/logos/adx-adx-logo.png"
+    },
+    {
+        "name": "Parellel",
+        "code": "PRLUSDT",
+        "icon": "/icons/prl.svg",
+        "icond": "https://cryptologos.cc/logos/adx-adx-logo.png"
+    },
+    {
+        "name": "Dogecoin",
+        "code": "DOGUSDTE",
+        "icon": "/icons/doge.svg",
+        "icond": "https://cryptologos.cc/logos/dogecoin-doge-logo.png"
+    },
+    {
+        "name": "Bitcoin SV",
+        "code": "BSVUSDT",
+        "icon": "/icons/bsv.svg",
+        "icond": "https://cryptologos.cc/logos/bitcoin-sv-bsv-logo.png"
+    },
+    {
+        "name": "Theta Network",
+        "code": "THETAUSDT",
+        "icon": "/icons/theta.svg",
+        "icond": "https://cryptologos.cc/logos/theta-theta-logo.png"
     },
 ]
 
