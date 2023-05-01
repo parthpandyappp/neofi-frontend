@@ -41,6 +41,7 @@ const CryptoCoinPopUp = ({ selectedCoin, togglePopup, chooseCoin }) => {
                     onClick={() => {
                       chooseCoin(c);
                       togglePopup((prev) => !prev);
+                      localStorage.setItem("selectedCoin", JSON.stringify(c));
                     }}
                   >
                     <span className="flex gap-3 items-center">
