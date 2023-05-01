@@ -12,11 +12,11 @@ const BuyCard = (props) => {
   return (
     <section class="relative rounded-xl bg-nav w-3/4 min-h-2/3 md:w-1/4 md:min-h-2/3 mx-auto">
       <div className="absolute flex justify-self-center items-center justify-center w-full -top-5">
-        <div className="rounded-full outline outline-nav outline-4">
+        <div className="flex items-center justify-center rounded-full outline outline-black outline-8 outline-offset-8 z-0">
           <img
             src={selectedCoin.icon}
             alt=""
-            class="rounded-full w-12 h-12 shadow outline outline-black outline-8 object-cover"
+            class="rounded-full w-12 h-12 outline bg-nav outline-nav outline-offset-2 outline-8 object-cover z-40"
           />
         </div>
       </div>
